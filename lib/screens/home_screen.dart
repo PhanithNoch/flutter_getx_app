@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: Text('GETX Management'),
       ),
       body: KeyboardActions(
         config: _buildConfig(context),
@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.pink,
+                        color: Colors.grey,
                       ),
                       child: Text(
                         'Navigation',
@@ -174,43 +174,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blueAccent,
+                        color: Colors.red,
                       ),
                       child: Text(
                         'OBX',
-                        style: TextStyle(
-                            color: Colors.white, fontWeight: FontWeight.bold),
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 10,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-//                    Get.to(NavigationPage(),arguments: ["phanith"]);
-//                    Get.off(NavigationPage()); navigate next but can't back
-                      Get.toNamed('counter_gex_builder');
-                    },
-                    child: Container(
-                      alignment: Alignment.center,
-                      width: 120,
-                      height: 80,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.blueAccent,
-                      ),
-                      child: Text(
-                        'GetX Builder',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,
@@ -230,10 +197,66 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 80,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        color: Colors.blueAccent,
+                        color: Colors.teal,
                       ),
                       child: Text(
                         'API',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+
+
+                  SizedBox(width: 10,),
+                  GestureDetector(
+                    onTap: () {
+//                    Get.to(NavigationPage(),arguments: ["phanith"]);
+//                    Get.off(NavigationPage()); navigate next but can't back
+                      Get.toNamed('home_sample_page');
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 120,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.deepPurpleAccent,
+                      ),
+                      child: Text(
+                        'Example API',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10,),
+                  GestureDetector(
+                    onTap: () {
+//                    Get.to(NavigationPage(),arguments: ["phanith"]);
+//                    Get.off(NavigationPage()); navigate next but can't back
+                      Get.toNamed('example_api');
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 120,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.blueAccent,
+                      ),
+                      child: Text(
+                        'CRUD API',
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                         overflow: TextOverflow.ellipsis,

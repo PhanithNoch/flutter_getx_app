@@ -5,7 +5,10 @@ import 'package:fluttergetxapp/getx_builder/getx_builder_page.dart';
 import 'package:fluttergetxapp/getx_components/getx_component.dart';
 import 'package:fluttergetxapp/getx_navigations/navigation_page.dart';
 import 'package:fluttergetxapp/obx/counter_obx_page.dart';
+import 'package:fluttergetxapp/people/views/people_create_page.dart';
+import 'package:fluttergetxapp/people/views/people_home_page.dart';
 import 'package:fluttergetxapp/screens/home_screen.dart';
+import 'package:fluttergetxapp/simple_api/api/views/home_page.dart';
 import 'package:get/get.dart';
 
 import 'counter/counter_page.dart';
@@ -33,6 +36,9 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/counter_gex_builder',page:()=> GetXBuilderCounterPage()),
         GetPage(name: '/obx_counter',page:()=> CounterOBXPage()),
         GetPage(name: '/people',page:()=> PeoplePage(),binding: PeopleDi()),
+        GetPage(name: '/example_api',page:()=> PeopleHomePage()),
+        GetPage(name: '/home_sample_page',page:()=> HomeSamplePage()),
+        GetPage(name: '/create_people',page:()=> PeopleCreatePage()),
       ],
     );
 
