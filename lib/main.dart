@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:fluttergetxapp/getx_api/di/people_id.dart';
+import 'package:fluttergetxapp/getx_api/poeple_page.dart';
+import 'package:fluttergetxapp/getx_builder/getx_builder_page.dart';
+import 'package:fluttergetxapp/getx_components/getx_component.dart';
+import 'package:fluttergetxapp/getx_navigations/navigation_page.dart';
+import 'package:fluttergetxapp/obx/counter_obx_page.dart';
 import 'package:fluttergetxapp/screens/home_screen.dart';
-import 'package:fluttergetxapp/screens/test_page.dart';
-import 'package:fluttergetxapp/views/shopping_page.dart';
 import 'package:get/get.dart';
+
+import 'counter/counter_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +24,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home:TestingPage()
+      home:HomeScreen(),
+      getPages: [
+        GetPage(name: '/',page:()=> HomeScreen()),
+        GetPage(name: '/get_component',page:()=> GetXComponent()),
+        GetPage(name: '/counter_page',page:()=> CounterPage()),
+        GetPage(name: '/navigation',page:()=> NavigationPage()),
+        GetPage(name: '/counter_gex_builder',page:()=> GetXBuilderCounterPage()),
+        GetPage(name: '/obx_counter',page:()=> CounterOBXPage()),
+        GetPage(name: '/people',page:()=> PeoplePage(),binding: PeopleDi()),
+      ],
     );
+
   }
 }
