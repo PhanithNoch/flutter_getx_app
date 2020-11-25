@@ -26,8 +26,21 @@ class CounterOBXPage extends StatelessWidget {
                       onPressed: () {
                         Get.find<CounterOBXController>().increment();
                       },
-                      child: Text('Increment')
+                      child: Text('Increment')),
+                ],
+              ))),
+          Obx(() => Center(
+                  child: Column(
+                children: [
+                  Text(
+                    Get.find<CounterOBXController>().counter2.value.toString(),
+                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                   ),
+                  FlatButton(
+                      onPressed: () {
+                        Get.find<CounterOBXController>().increment2();
+                      },
+                      child: Text('Increment')),
                 ],
               ))),
         ],

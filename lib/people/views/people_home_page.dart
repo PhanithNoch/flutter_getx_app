@@ -21,7 +21,15 @@ class PeopleHomePage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Card(
                     child: ListTile(
-//                      title: Text(controller.people),
+                      title: Text(controller.people[index].firstName),
+                      trailing: FlatButton(
+                          child: Icon(
+                        Icons.delete,
+                        color: Colors.red,
+                      )),
+                      onTap: () {
+                        controller.deletePeople(controller.people[index].id);
+                      },
                     ),
                   );
                 });

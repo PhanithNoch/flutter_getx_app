@@ -1,5 +1,3 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 class People {
   List<Data> data;
   People({this.data});
@@ -21,6 +19,7 @@ class People {
     return data;
   }
 }
+
 class Data {
   int id;
   String firstName;
@@ -28,19 +27,13 @@ class Data {
   String age;
   String active_date;
 
-  Data({this.id,
-    this.firstName,
-    this.lastName,
-    this.age,
-    this.active_date
-  });
+  Data({this.id, this.firstName, this.lastName, this.age, this.active_date});
   Data.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     firstName = json['first_name'];
     lastName = json['last_name'];
     age = json['age'];
     active_date = json['active_date'];
-
   }
 
   Map<String, dynamic> toJson() {

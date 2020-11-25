@@ -6,8 +6,6 @@ class HomeController extends GetxController {
   List<User> _users = [];
   List<User> get users => _users;
   final status = Status.loading.obs;
-
-
   @override
   void onReady() {
     loadUser();

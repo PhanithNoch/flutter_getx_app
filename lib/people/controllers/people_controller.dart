@@ -5,8 +5,8 @@ import 'package:get/get.dart';
 enum Status { loading, success, error,createSuccess }
 
 class PeopleController extends GetxController {
-  List<PeopleModel> _people;
-  List<PeopleModel> get people => _people;
+  List<Data> _people;
+  List<Data> get people => _people;
 
   final status = Status.loading.obs;
 
@@ -26,10 +26,18 @@ class PeopleController extends GetxController {
   }
 
   Future<void> addPeople(Data people) async {
-
     Future<String> response = RestAPI.instance.addPeople(people);
     response.then((String value) => print(value));
+    update();
+  }
+
+  Future<void> deletePeople(int userId)
+  {
+    Future<String> response = RestAPI.instance.deletePeople(userId);
+    response.then((String value) => print(value));
+    getData();
 
     update();
   }
+
 }

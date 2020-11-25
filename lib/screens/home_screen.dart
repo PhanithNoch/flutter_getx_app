@@ -263,6 +263,29 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
+                  SizedBox(width: 10,),
+                  GestureDetector(
+                    onTap: () {
+//                    Get.to(NavigationPage(),arguments: ["phanith"]);
+//                    Get.off(NavigationPage()); navigate next but can't back
+                      Get.toNamed('getx_structure_crud');
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: 120,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.blueAccent,
+                      ),
+                      child: Text(
+                        ' STRUCTURE API',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold,fontSize: 11),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
